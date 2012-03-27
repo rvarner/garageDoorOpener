@@ -65,16 +65,19 @@ module fobBox2() {
 // Execution //
 ///////////////
 //fobBox();
-difference() {
-	rotate(a=[0,0,45])
-	union() {
-		translate(v=[51,24,0]) rotate(a=[0,0,3.5]) fobBox2();
-		scale(v=[1.8,1,1.3]) moneyClip();
+union() {
+	difference() {
+		rotate(a=[0,0,45])
+		union() {
+			translate(v=[51,24,0]) rotate(a=[0,0,3.5]) fobBox2();
+			scale(v=[1.8,1,1.3]) moneyClip();
+		}
+		translate(v=[-2,16.5,25]) rotate(a=[0,0,48]) cube([14,10,50],center=true);
+		translate(v=[3.8,19.8,25]) rotate(a=[0,0,7]) cube([14,4,50],center=true);
 	}
-	translate(v=[-2,16.5,25]) rotate(a=[0,0,48]) cube([14,10,50],center=true);
-	translate(v=[3.8,19.8,25]) rotate(a=[0,0,7]) cube([14,4,50],center=true);
+	// Make a foot
+	translate(v=[1,5,1]) cylinder(r=6,h=2,center=true);
 }
-
 
 
 
