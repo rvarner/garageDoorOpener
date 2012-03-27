@@ -65,6 +65,7 @@ module fobBox2() {
 // Execution //
 ///////////////
 //fobBox();
+rotate(a=[0,0,45])
 union() {
 	translate(v=[51,24,0]) rotate(a=[0,0,3.5]) fobBox2();
 	scale(v=[1.8,1,1.3]) moneyClip();
