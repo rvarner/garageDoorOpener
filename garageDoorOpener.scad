@@ -141,7 +141,7 @@ module clip() {
 //translate(v=[0,50,0])fobBox();
 //fobBox2();
 //clipSide();
-
+rotate(a=[0,0,45])
 union() {
 clip();
 
