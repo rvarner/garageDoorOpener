@@ -1,19 +1,18 @@
-
-////////////////
-// Money Clip //
-////////////////
-
-module moneyClip() {
-	import_stl("MakerBot_Money_Clip_Larger_v4.stl");
-}
-
+// Copyright Reid Varner 2012
+//
+// Title: Garage Door Opener Clip
+// 
+// Purpose: My apartment gave me a keychain garage door opener. As this makes no sense because my garage door opener should
+// never leave my car, I decided to create a clip for my opener that would fit on my car's sun visor.
+//
+// Enjoy.
 
 /////////////////////
 // Garage Door Fob //
 /////////////////////
 
 fobLenA = 60.42;
-fobLenB = 54.75;
+//fobLenB = 54.75; // not used
 fobWidth = 31.60;
 fobThickA = 9.90;
 fobThickB = 10.20;
@@ -63,30 +62,6 @@ module fobBoxThick() {
 }
 
 
-
-////////////////////////
-// Money Clip Fob Box //
-////////////////////////
-
-module moneyClipFobBox() {
-	union() {
-		difference() {
-			rotate(a=[0,0,45])
-			union() {
-				translate(v=[51,24,0]) rotate(a=[0,0,3.5]) fobBoxThick();
-				scale(v=[1.8,1,1.3]) moneyClip();
-			}
-			translate(v=[-2,16.5,25]) rotate(a=[0,0,48]) cube([14,10,50],center=true);
-			translate(v=[3.8,19.8,25]) rotate(a=[0,0,7]) cube([14,4,50],center=true);
-//			translate(v=[30,30,0]) 
-//				rotate(a=[0,0,45]) translate(v=[0,0,40/2]) cube([108,15,40],center=true);
-		}
-		// Make a foot
-		//translate(v=[1,5,1]) cylinder(r=6,h=2,center=true);
-	}
-}
-
-
 //////////
 // Clip //
 //////////
@@ -133,19 +108,21 @@ module clip() {
 	translate(v=[clipLen/2 + 1.5,0,0])rotate(a=[0,0,-clipAngle])translate(v=[-clipLen/2,0,0])clipSide();
 }
 
+/////////////////////////////
+// Garage Door Opener Clip //
+/////////////////////////////
+
+module garageDoorOpenerClip() {	
+	rotate(a=[0,0,45]) union() {
+		clip();
+		clipCurve();
+		translate(v=[-33,8,1])cylinder(h=2,r=8,center=true,$fn=20);
+	}
+}
+
+
 ///////////////
 // Execution //
 ///////////////
 
-
-//translate(v=[0,50,0])fobBox();
-//fobBox2();
-//clipSide();
-rotate(a=[0,0,45])
-union() {
-clip();
-
-clipCurve();
-
-translate(v=[-33,8,1])cylinder(h=2,r=8,center=true,$fn=20);
-}
+garageDoorOpenerClip();
