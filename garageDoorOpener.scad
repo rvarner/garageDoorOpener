@@ -2,8 +2,8 @@
 //
 // Title: Garage Door Opener Clip
 // 
-// Purpose: My apartment gave me a keychain garage door opener. As this makes no sense because my garage door opener should
-// never leave my car, I decided to create a clip for my opener that would fit on my car's sun visor.
+// Purpose: My apartment building gave me a keychain garage door opener. As this makes no sense because my garage door
+// opener should never leave my car, I decided to create a clip for my opener that would fit on my car's sun visor. 
 //
 // Enjoy.
 
