@@ -5,6 +5,12 @@
 // Purpose: My apartment building gave me a keychain garage door opener. As this makes no sense because my garage door
 // opener should never leave my car, I decided to create a clip for my opener that would fit on my car's sun visor. 
 //
+// Published on:
+//   GitHub: git://github.com/rvarner/garageDoorOpener.git
+//   Thingiverse: http://www.thingiverse.com/thing:20855
+//
+// See Thingiverse link above for licensing information.
+//
 // Enjoy.
 
 /////////////////////
